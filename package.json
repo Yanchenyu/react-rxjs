@@ -4,7 +4,9 @@
   "description": "react project with rxjs",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --mode development --open",
+    "build": "webpack --mode production"
   },
   "repository": {
     "type": "git",
@@ -15,5 +17,23 @@
   "bugs": {
     "url": "https://github.com/Yanchenyu/react-rxjs/issues"
   },
-  "homepage": "https://github.com/Yanchenyu/react-rxjs#readme"
+  "homepage": "https://github.com/Yanchenyu/react-rxjs#readme",
+  "dependencies": {
+    "rxjs": "^6.3.3",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.0",
+    "@babel/plugin-proposal-class-properties": "^7.3.0",
+    "@babel/preset-env": "^7.2.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.4",
+    "clean-webpack-plugin": "^1.0.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "3.0.7",
+    "webpack": "^4.26.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
+  }
 }
