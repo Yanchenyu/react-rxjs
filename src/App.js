@@ -100,7 +100,9 @@ const connect = (observable$, initialState, actions) => ((Index) => {
     }
 })
 
-const count$  = new Subject();
+const count$  = new Subject().pipe(
+    throttleTime(500)
+);
 
 const clean$ = new Subject().pipe(
     mergeMap(
