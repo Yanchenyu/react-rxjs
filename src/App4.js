@@ -42,7 +42,7 @@ export default class extends Component {
         this.subscription3 = new Subject();
 
         this.subscription1.pipe(
-            throttleTime(100),
+            throttleTime(200),
         ).subscribe(val => {
             this.setState({ val })
         });
@@ -66,7 +66,7 @@ export default class extends Component {
 
         this.subscription3.pipe(
             mergeMap(
-                () => fromPromise(fetch('/movies.json'))
+                () => fromPromise(fetch('/forbidClean.json'))
                     .pipe(
                         filter(val => !val.ok),
                         map(val => 0)
@@ -108,3 +108,7 @@ export default class extends Component {
         />
     }
 }
+
+/**
+ * action => state => stream => state => setState => view
+ */
